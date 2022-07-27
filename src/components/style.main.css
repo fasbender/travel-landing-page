@@ -1,0 +1,201 @@
+.banner{
+    background: linear-gradient(181.06deg, rgba(0, 0, 0, 0.2) 0.91%, rgba(255, 255, 255, 0) 116.71%, rgba(255, 255, 255, 0) 116.72%), url('./background.png'), #C4C4C4;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+.banner h2{
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+.banner h1{
+    font-size: 10rem;
+}
+
+.navbar{
+    position: absolute;
+    width: 100%;
+}
+.nav{
+    display: grid;
+    grid-template-columns: 30% 50%;
+    padding: 2rem;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-list li, .sidebar li{
+    list-style: none;
+}
+.nav-list li a, .sidebar li a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger{
+    display: none;
+}
+.sidebar{
+    display: none;
+}
+.socials{
+    left: 2%;
+    padding: 5px;
+}
+.socials, .location{
+    position: absolute;
+}
+.socials div{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.location{
+    bottom: 5%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.location div{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 10px;
+    flex: 1;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        grid-template-columns: 30% 70%;
+        padding: 1.5rem;
+    }
+    .banner h1{
+        font-size: 8rem;
+    }
+    .location{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .nav{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+    .banner{
+        width: 100%;
+    }
+    .nav-list{
+        display: none;
+    }
+    .logo{
+        justify-content: start;
+    }
+    .hamburger{
+        display: inline;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .ham, .cross{
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        border-radius: 10px;
+    }
+    .ham::before, .ham::after, .cross::before, .cross::after{
+        content: '';
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        border-radius: 10px;
+    }
+    .ham::before{
+        width: 35px;
+        transform: translateY(-6px);
+    }
+    .ham::after{
+        width: 25px;
+        transform: translateY(6px);
+    }
+    .sidebar{
+        display: block;
+        position: absolute;
+        padding: 2rem;
+        background: #287287;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        transition: 0.2s ease all;
+        z-index: 1;
+    }
+    .sidebar.active{
+        left: 0;
+        transition: 0.2s ease all;
+    }
+    .side-items{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .crossbar{
+        position: relative;
+    }
+    .cross{
+        position: absolute;
+        right: 0;
+        background: transparent;
+    }
+    .cross::before, .cross::after{
+        width: 30px;
+    }
+    .cross::before{
+        transform: rotate(45deg);
+    }
+    .cross::after{
+        transform: rotate(-45deg);
+    }
+    .hamburger, .crossbar{
+        cursor: pointer;
+    }
+    .banner h1{
+        font-size: 4rem;
+    }
+    .socials{
+        left: 2%;
+        bottom: 0;
+    }
+    .location{
+        display: block;
+        width: 60%;
+    }
+}
+@media screen and (width: 280px) {
+    .banner h1{
+        font-size: 3rem;
+    }
+    .location{
+        width: 70%;
+    }
+}
