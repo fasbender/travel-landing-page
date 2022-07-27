@@ -2,12 +2,15 @@ import React from 'react'
 
 export const Sidebar = ({ toggle, setToggle }) => {
 
-const navItems = [
-    'Destinations',
-    'Activities',
-    'About Us',
-    'Contact'
-]
+    const navItems = [
+        'Destinations',
+        'Activities',
+        'About Us',
+        'Contact'
+    ]
+    const enableScroll = () => document.body.style.overflow = "auto"
+    const disableScroll = () => document.body.style.overflow = "hidden"
+    toggle ? disableScroll() : enableScroll()
 
   return (
     <div className={ toggle ? 'sidebar active' : 'sidebar' }>
