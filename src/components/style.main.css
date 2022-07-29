@@ -83,16 +83,18 @@
     flex-direction: row-reverse;
     justify-content: space-evenly;
 }
-.activities{
+.activities, .philosophy{
     padding: 2rem;
-    border: 1px solid black;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
-.activities h1{
+.activities{
+    margin-top: 50px;
+}
+.activities h1, .philosophy h1{
     margin-bottom: 50px;
 }
-.activities h3{
+.activities h3, .philosophy h3{
     font-size: 0.7rem;
     letter-spacing: 5px;
     margin-bottom: 10px;
@@ -125,6 +127,42 @@
     align-items:flex-start;
     padding: 20px;
 }
+.philosophy{
+    margin-top: 100px;
+}
+.about-us{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+}
+.about-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    
+}
+.about-desc div{
+    margin-left: 100px;
+}
+.about-desc div p{
+    width: 50%;
+}
+.about-img{
+    width: 70%;
+    margin-left: auto;
+}
+.about-img img{
+    width: 100%;
+}
+/* .slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+} */
 
 @media screen and (max-width: 1024px) {
     .nav{
@@ -137,6 +175,27 @@
     .location{
         width: 100%;
     }
+    .activities div{
+        width: 90%;
+    }
+    .about-us{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+    }
+    .about-us div{
+        margin-bottom: 30px;
+    }
+    .about-desc div{
+        text-align: center;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .about-desc div p{
+        width: 100%;
+    }
+    .about-img{
+        margin: auto;
+    }   
 }
 @media screen and (max-width: 600px) {
     .nav{
@@ -232,6 +291,15 @@
     .location{
         display: block;
         width: 60%;
+    }
+    .about-img{
+        width: 100%;
+    }
+    .about-img img{
+        width: 100%;
+    }
+    .about-desc div p{
+        font-size: 11px;
     }
 }
 @media screen and (width: 280px) {
