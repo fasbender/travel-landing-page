@@ -11,15 +11,15 @@ const Philosophy = () => {
             </div>
             <div className='about-desc'>
                 <div>
-                    <h2 className='num'>Sustainable</h2>
+                    <h2 className='num1'>Sustainable</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu scelerisque quam, ac tristique dolor. Aliquam nulla risus,</p>
                 </div>
                 <div>
-                    <h2 className='num'>Fair & Share</h2>
+                    <h2 className='num2'>Fair & Share</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu scelerisque quam, </p>
                 </div>
                 <div>
-                    <h2 className='num'>Experience</h2>
+                    <h2 className='num3'>Experience</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu scelerisque quam, ac tristique </p>
                 </div>
             </div>
