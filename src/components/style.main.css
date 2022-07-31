@@ -201,6 +201,45 @@
     margin-left: 20px;
     color: gold;
 }
+.search{
+    margin-top: -150px;
+    height: 40vh;
+    background: #F4F4F4;
+    padding: 3rem;
+}
+.dropdown{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.dropdown-item{
+    position: relative;
+}
+.dropdown-item span{
+    position: absolute;
+    top: -20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+select{
+    width: 200px;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background: #F4F4F4;
+}
+.search-button button{
+    padding: 1.2rem 4rem;
+    background: #3D3D3D;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
 @media screen and (max-width: 1024px) {
     .nav{
         grid-template-columns: 30% 70%;
@@ -346,6 +385,13 @@
     }
     .num1::before, .num2::before, .num3::before{
         left: 20%;
+    }
+    .search{
+        margin-top: auto;
+        height: auto;
+    }
+    .dropdown-item{
+        margin-bottom: 40px;
     }
 }
 @media screen and (width: 280px) {
